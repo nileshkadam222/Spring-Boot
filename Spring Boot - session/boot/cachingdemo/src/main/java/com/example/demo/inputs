@@ -1,0 +1,44 @@
+@CacheEvict(value="addresses", allEntries=true)
+public String getAddress(Customer customer) {...}
+
+------------
+
+@Caching(evict = { 
+  @CacheEvict("addresses"), 
+  @CacheEvict(value="directory") })
+public String getAddress(Customer customer) {...}
+
+-----------
+
+Conditional Caching
+@CachePut(value="addresses", condition="#customer.name=='Tom'")
+public String getAddress(Customer customer) {...}
+
+-------
+Eviction on Demand
+@RestController
+public class CachingController {
+     
+    @Autowired
+    CachingService cachingService;
+     
+    @GetMapping("clearAllCaches")
+    public void clearAllCaches() {
+        cachingService.evictAllCaches();
+    }
+}
+In the CachingService, we can then clear all the caches by iterating over the cache names obtained from the cache manager:
+
+
+public void evictAllCaches() {
+    cacheManager.getCacheNames().stream()
+      .forEach(cacheName -> cacheManager.getCache(cacheName).clear());
+}
+ Automatic Eviction
+There are certain use cases where cache eviction should be performed automatically at certain intervals. In this case, we can make use of the Spring’s task scheduler:
+
+
+@Scheduled(fixedRate = 6000)
+public void evictAllcachesAtIntervals() {
+    evictAllCaches();
+}

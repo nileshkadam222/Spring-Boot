@@ -1,0 +1,23 @@
+package com.dao;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.entity.Article;
+@Transactional
+@Repository
+public class ArticleDAO implements IArticleDAO {
+	@PersistenceContext	
+	private EntityManager entityManager;	
+	 
+	 
+	@Override
+	public void addArticle(Article article) {
+		entityManager.persist(article);
+	}
+	 
+}

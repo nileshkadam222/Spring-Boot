@@ -1,0 +1,14 @@
+src/main/java/com/example/demo/SpringBootJdbcController.java:7:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/com/example/demo/SpringBootJdbcController.java:7:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/com/example/demo/SpringBootJdbcController.java:7:	CommentRequired: Header comments are required
+src/main/java/com/example/demo/SpringBootJdbcController.java:7:	CommentRequired: Header comments are required
+src/main/java/com/example/demo/SpringBootJdbcController.java:8:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/com/example/demo/SpringBootJdbcController.java:8:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/com/example/demo/SpringBootJdbcController.java:9:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/example/demo/SpringBootJdbcController.java:9:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/example/demo/SpringBootJdbcController.java:9:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the jdbc field if you want a default access modifier
+src/main/java/com/example/demo/SpringBootJdbcController.java:9:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the jdbc field if you want a default access modifier
+src/main/java/com/example/demo/SpringBootJdbcController.java:9:	CommentRequired: Field comments are required
+src/main/java/com/example/demo/SpringBootJdbcController.java:9:	CommentRequired: Field comments are required
+src/main/java/com/example/demo/SpringBootJdbcController.java:11:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/example/demo/SpringBootJdbcController.java:11:	CommentRequired: Public method and constructor comments are required
