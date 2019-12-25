@@ -1,5 +1,6 @@
 package com.lynda.common.service;
 
+import com.lynda.common.aspect.Loggable;
 import com.lynda.common.data.entity.Customer;
 import com.lynda.common.data.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +17,18 @@ public class CustomerService {
         this.customerRepository = customerRepository;
     }
 
+    @Loggable
     public List<Customer> getAll(){
         return (List<Customer>) this.customerRepository.findAll();
     }
 
+    @Loggable
     public Customer findOne(String id){
         return this.customerRepository.findOne(id);
+    }
+
+    @Loggable
+    public Integer  divideByZeroException(int number){
+        return number/0;
     }
 }
