@@ -1,13 +1,20 @@
 management:
    security:
-     enabled:false
+     enabled: false
+server:
+  ssl:
+    key-store: classpath:keystore.jks
+    key-store-password: password
+    key-store-type: jks
+    key-alias: linkdin
+    key-password: password
 ---
 spring:
- profiles:dev
+ profiles: dev
 server:
- port:8000
+ port: 8000
 ---
 spring:
- profile:prod
+ profile: prod
 server:
- port:9000
+ port: 9000
