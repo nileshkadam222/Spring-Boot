@@ -1,0 +1,7 @@
+com\frankmoley\boot\landon\roomwebapp\RoomWebAppApplication.class
+com\frankmoley\boot\landon\roomwebapp\repository\RoomRepo.class
+com\frankmoley\boot\landon\roomwebapp\web\ApiController.class
+com\frankmoley\boot\landon\roomwebapp\service\RoomServiceImpl.class
+com\frankmoley\boot\landon\roomwebapp\service\RoomService.class
+com\frankmoley\boot\landon\roomwebapp\Entity\Room.class
+com\frankmoley\boot\landon\roomwebapp\web\RoomController.class
