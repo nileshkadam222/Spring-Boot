@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../logging-spring-boot-autoconfigure/logging-spring-boot-autoconfigure.iml" filepath="$PROJECT_DIR$/../logging-spring-boot-autoconfigure/logging-spring-boot-autoconfigure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../logging-spring-boot-starter/logging-spring-boot-starter.iml" filepath="$PROJECT_DIR$/../logging-spring-boot-starter/logging-spring-boot-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../room-cleaner-consumer/room-cleaner-consumer.iml" filepath="$PROJECT_DIR$/../room-cleaner-consumer/room-cleaner-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../room-clr-app/room-clr-app.iml" filepath="$PROJECT_DIR$/../room-clr-app/room-clr-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/room-web-app.iml" filepath="$PROJECT_DIR$/room-web-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../service-logging/service-logging.iml" filepath="$PROJECT_DIR$/../service-logging/service-logging.iml" />
+    </modules>
+  </component>
+</project>
