@@ -1,9 +1,12 @@
 package com.frankmoley.boot.landon.roomwebapp;
 
 import org.springframework.boot.actuate.endpoint.Endpoint;
+import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class CustomeEndPoint implements Endpoint<Map<String,String>> {
     @Override
     public String getId() {
@@ -22,7 +25,9 @@ public class CustomeEndPoint implements Endpoint<Map<String,String>> {
 
     @Override
     public Map<String, String> invoke() {
-        Map<String,String>
-        return null;
+        Map<String,String> endpointData = new HashMap<>();
+        endpointData.put("room","a");
+        endpointData.put("ee","ee");
+        return endpointData;
     }
 }
