@@ -1,0 +1,18 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.frankmoley.boot.landon.logging.autoconfigure.LandonLoggingProperties",
+      "name": "landon.logging",
+      "type": "com.frankmoley.boot.landon.logging.autoconfigure.LandonLoggingProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.frankmoley.boot.landon.logging.autoconfigure.LandonLoggingProperties",
+      "defaultValue": "LandonAuditLogger",
+      "name": "landon.logging.logger-name",
+      "type": "java.lang.String"
+    }
+  ]
+}
