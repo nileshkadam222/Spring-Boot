@@ -1,0 +1,10 @@
+worddocuments:
+  docexportproperties:
+    - sql: "SELECT * FROM worddocumenttesting.model_info"
+      title: "Model Info"
+      printtype: "single-table"
+      headertype: "vertical"
+    - sql: "SELECT * FROM worddocumenttesting.limittion"
+      title: "Model Limitation"
+      printtype: "multiple-table"
+      headertype: "horizontal"
