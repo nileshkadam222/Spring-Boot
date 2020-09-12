@@ -1,0 +1,6 @@
+amazon:
+  credentials:
+    AWSAccessKeyId:
+    AWSSecretKey :
+  s3:
+    BucketName : 
