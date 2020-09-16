@@ -21,7 +21,7 @@ public class AmazonConfiguration {
         this.credentials = credentials;
     }
 
-    public Map<String, String> getS3() {
+    public Map<String, String> getS3(String bucketName) {
         return s3;
     }
 
