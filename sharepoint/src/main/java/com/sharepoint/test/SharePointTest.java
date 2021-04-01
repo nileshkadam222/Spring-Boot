@@ -20,17 +20,13 @@ public class SharePointTest {
 
 
 	public static void main(String[] args) throws Exception {
-		/*
-		 * domain: nileshkadam.sharepoint.com passwd: Debugger@111 spSieUrl: /sites/MRM
-		 * user: nilesh.kadam222@nileshkadam.onmicrosoft.com defaultFolder : Shared
-		 * Documents/mrm
-		 */
+	
 
 		// TODO Auto-generated method stub
-		String user = "nilesh.kadam222@nileshkadam.onmicrosoft.com";
-		String passwd = "Debugger@111";
-		String domain = "nileshkadam.sharepoint.com";
-		String spSiteUrl = "/sites/MRM";
+		String user = "";
+		String passwd = "";
+		String domain = "";
+		String spSiteUrl = "";
 
 		// get folder List
 		PLGSharepointClient wrapper = new PLGSharepointClientOnline(user, passwd, domain, spSiteUrl);
