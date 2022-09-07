@@ -1,0 +1,36 @@
+apiVersion: app/v1
+kind: deployment
+metadata:
+  name: user-service-app
+  labels:
+    app: user-service-app
+spec:
+ replicas: 1
+ selector:
+   matchlabel:
+     app: user-service-app
+ template:
+   metadata:
+    labels:
+      app: user-service-app
+   spec:
+     containers:
+       - name: user-service-app
+         image: nileshkadam222/user-service:0.0.1
+         imagePullPolicy: Always
+         ports:
+           - containerPort: 9002
+
+---
+
+kind: service
+apiVersion: v1
+metadata:
+  name: user-service-name
+spec:
+  selector:
+    app: user-service-app
+  type: clusterIp
+  ports:
+    - port: 80
+      targetPort: 9002
