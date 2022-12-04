@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/many-to-many-master.iml" filepath="$PROJECT_DIR$/.idea/many-to-many-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-many-to-many-master/spring-boot-many-to-many.iml" filepath="$PROJECT_DIR$/spring-boot-many-to-many-master/spring-boot-many-to-many.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+server:
+  port: 8183
+
+logging:
+  level:
+    root: INFO
+  pattern:
+    console: "%d{HH:mm:ss,SSS} - %msg%n"
+spring:
+ banner:
+   image:
+     width: 50
+     height: 15
+     margin: 10
+     invert: true
