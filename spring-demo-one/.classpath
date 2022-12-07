@@ -48,17 +48,7 @@
 	<classpathentry kind="lib" path="lib/spring-orm-5.3.9.jar"/>
 	<classpathentry kind="lib" path="lib/spring-orm-5.3.9-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/spring-orm-5.3.9-sources.jar"/>
-	<classpathentry kind="lib" path="lib/spring-oxm-5.3.9.jar"/>
-	<classpathentry kind="lib" path="lib/spring-oxm-5.3.9-javadoc.jar"/>
-	<classpathentry kind="lib" path="lib/spring-oxm-5.3.9-sources.jar"/>
-	<classpathentry kind="lib" path="lib/spring-r2dbc-5.3.9.jar"/>
-	<classpathentry kind="lib" path="lib/spring-r2dbc-5.3.9-javadoc.jar"/>
-	<classpathentry kind="lib" path="lib/spring-r2dbc-5.3.9-sources.jar"/>
-	<classpathentry kind="lib" path="lib/spring-test-5.3.9.jar"/>
-	<classpathentry kind="lib" path="lib/spring-test-5.3.9-javadoc.jar"/>
-	<classpathentry kind="lib" path="lib/spring-test-5.3.9-sources.jar"/>
 	<classpathentry kind="lib" path="lib/spring-tx-5.3.9.jar"/>
-	<classpathentry kind="lib" path="lib/spring-tx-5.3.9-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/spring-tx-5.3.9-sources.jar"/>
 	<classpathentry kind="lib" path="lib/spring-web-5.3.9.jar"/>
 	<classpathentry kind="lib" path="lib/spring-web-5.3.9-javadoc.jar"/>

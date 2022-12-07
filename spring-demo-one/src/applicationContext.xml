@@ -7,8 +7,16 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
+    <bean id="happyFortuneService" class="com.luv2code.springdemo.HappyFortuneService"></bean>
+    
     <bean id="myCoach" 
     	class="com.luv2code.springdemo.TrackCoach">
+    	<constructor-arg ref="happyFortuneService"></constructor-arg>
+    </bean>
+    
+    <bean id="trackCoach" 
+    	class="com.luv2code.springdemo.TrackCoach">
+    	<constructor-arg ref="happyFortuneService"/>
     </bean>
     
     
