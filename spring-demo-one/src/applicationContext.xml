@@ -22,6 +22,8 @@
     <bean id="cricketCoach" 
     	class="com.luv2code.springdemo.CrecketCoach">
     	<property name="fortuneService" ref="happyFortuneService"/>
+		<property name="emailAddress" value="nilesh.kadam222@gmail.com"/>
+    	<property name="teamName" value="Mumbai Indian"/>   
     </bean>
     
     
