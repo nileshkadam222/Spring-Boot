@@ -7,7 +7,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
+    
+    <context:property-placeholder location="classpath:sport.properties"/>
+    
+    
     <bean id="happyFortuneService" class="com.luv2code.springdemo.HappyFortuneService"></bean>
+    <bean id="randomFortuneService" class="com.luv2code.springdemo.RandomFortune"></bean>
     
     <bean id="myCoach" 
     	class="com.luv2code.springdemo.TrackCoach">
@@ -22,8 +27,12 @@
     <bean id="cricketCoach" 
     	class="com.luv2code.springdemo.CrecketCoach">
     	<property name="fortuneService" ref="happyFortuneService"/>
-		<property name="emailAddress" value="nilesh.kadam222@gmail.com"/>
-    	<property name="teamName" value="Mumbai Indian"/>   
+		<property name="emailAddress" value="${foo.email}"/>
+    	<property name="teamName" value="${foo.team}"/>   
+    </bean>
+    
+    <bean id="basketBallCoach" class="com.luv2code.springdemo.BasketBallCoach">
+    	<constructor-arg ref="randomFortuneService"/>
     </bean>
     
     
