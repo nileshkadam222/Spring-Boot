@@ -1,6 +1,7 @@
 package com.luv2code.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,6 +14,7 @@ public class FootBallCoach implements Coach {
 	}
 	
 	@Autowired
+	@Qualifier("happyFortuneService")
 	public void setFortuneService(FortuneService fortuneService) {
 		System.out.println("Indside Setter method.");
 		this.fortuneService = fortuneService;
