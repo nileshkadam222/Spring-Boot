@@ -12,7 +12,11 @@ public class AnnotationDemoApp {
 		
 		System.out.println(theCoach.getDailyWorkout());
 		
+		System.out.println(theCoach.getDailyFortune());
+		
 		System.out.println(footBallCoach.getDailyWorkout());
+		
+		System.out.println(footBallCoach.getDailyFortune());
 		
 		context.close();
 	}
