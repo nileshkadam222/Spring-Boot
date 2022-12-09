@@ -10,13 +10,25 @@ public class AnnotationDemoApp {
 		
 		Coach footBallCoach = context.getBean("footBallCoach",Coach.class);
 		
+		Coach kabbdiCoach = context.getBean("kabbdiCoach",Coach.class);
+		
+		
+		System.out.println("---------- Tenies ------------------------------");
 		System.out.println(theCoach.getDailyWorkout());
 		
 		System.out.println(theCoach.getDailyFortune());
-		
+	
+		System.out.println("---------- FootBall ------------------------------");
 		System.out.println(footBallCoach.getDailyWorkout());
 		
 		System.out.println(footBallCoach.getDailyFortune());
+	
+
+		System.out.println("---------- Kabbdi ------------------------------");
+		System.out.println(kabbdiCoach.getDailyWorkout());
+		
+		System.out.println(kabbdiCoach.getDailyFortune());
+	
 		
 		context.close();
 	}
