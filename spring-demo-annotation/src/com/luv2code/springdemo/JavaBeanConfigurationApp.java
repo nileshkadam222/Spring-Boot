@@ -11,8 +11,6 @@ public class JavaBeanConfigurationApp {
 		Coach theCoach = contex.getBean("swimCoach",Coach.class);
 		
 		System.out.println(theCoach.getDailyWorkout());
-		
-		System.out.println(theCoach.getDailyFortune());
 
 	}
 
