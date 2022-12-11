@@ -11,6 +11,9 @@ public class AnnotationBeanScopeDemoApp {
 		
 		Coach alphaCoach = context.getBean("tennisCoach",Coach.class);
 		
+		System.out.println(theCoach.getDailyFortune());
+		
+		
 		boolean result = (theCoach == alphaCoach);
 		
 		System.out.println("poinitng to the same object: "+result);
