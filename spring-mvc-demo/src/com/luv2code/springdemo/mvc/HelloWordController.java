@@ -14,8 +14,8 @@ public class HelloWordController {
 		return "helloword-form";
 	}
 	
-	@RequestMapping(value = "/welcome", method = RequestMethod.POST)
-	public String showWelcome(ModelAttribute modelAttribute) {
+	@RequestMapping(value = "/welcome")
+	public String showWelcome() {
 		return "welcome";
 	}
 

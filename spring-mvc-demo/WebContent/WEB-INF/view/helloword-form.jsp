@@ -3,7 +3,7 @@
 	<title>Input form</title>
 </head>
 <body>
-	<form action="/spring-mvc-demo/welcome" method="post">
+	<form action="welcome" method="get">
 		<input type="text" placeholder="What is your name?" name="studentName">
 		<input type="submit"/> 
 	</form>

@@ -1,5 +1,5 @@
 <html>
 <body>
-	Welcome
+	Welcome - ${param.studentName}
 </body>
 </html>
