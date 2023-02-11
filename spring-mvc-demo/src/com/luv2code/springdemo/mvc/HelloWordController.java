@@ -12,11 +12,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWordController {
-	
+
 	@RequestMapping("/showform")
 	public String showForm() {
 		return "helloword-form";
 	}
+	@RequestMapping("/showform2")
+	@RequestBody
+	public String showForm() {
+		return "{}";
+	}
+}
 	
 	@RequestMapping(value = "/welcome")
 	public String showWelcome() {
