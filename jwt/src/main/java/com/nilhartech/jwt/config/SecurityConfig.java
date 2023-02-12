@@ -41,14 +41,17 @@ public class SecurityConfig {
     @Bean
     protected SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .headers().frameOptions().sameOrigin()
+                .and()
                 .csrf().disable()
                 .exceptionHandling()
-                .authenticationEntryPoint(authenticationEntryPoint)
+               // .authenticationEntryPoint(authenticationEntryPoint)
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests((authorize) -> authorize
+                        .requestMatchers("/h2console/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/authenticate").permitAll()
                         .anyRequest()
                         .authenticated()
