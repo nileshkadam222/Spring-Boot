@@ -12,5 +12,7 @@
 	<hr>
 	
 	<a href="showform">Hello word form</a>
+	<br><hr>
+	<a href="customer/showForm">Customer form</a>
 </body>
 </html>

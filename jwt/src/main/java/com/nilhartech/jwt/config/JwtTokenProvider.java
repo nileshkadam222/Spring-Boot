@@ -11,7 +11,7 @@ import java.util.function.Function;
 
 @Component
 public class JwtTokenProvider {
-    private String SECRET_KEY = "secret";
+    private final String SECRET_KEY = "secret";
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
@@ -46,7 +46,6 @@ public class JwtTokenProvider {
     }
 
     public Boolean validateToken(String token) {
-        final String username = extractUsername(token);
         return !isTokenExpired(token);
     }
 }

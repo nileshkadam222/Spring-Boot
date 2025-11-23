@@ -6,13 +6,11 @@ import com.nilhartech.jwt.dto.LoginDto;
 import com.nilhartech.jwt.dto.UpdateEmailRequest;
 import com.nilhartech.jwt.entity.User;
 import com.nilhartech.jwt.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,13 +18,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AuthenticationController {
-    @Autowired
-    private AuthenticationManager authenticationManager;
 
-    @Autowired
-    private JwtTokenProvider tokenProvider;
-    @Autowired
-    private UserRepository userRepository;
+    private final AuthenticationManager authenticationManager;
+
+
+    private final JwtTokenProvider tokenProvider;
+
+    private final UserRepository userRepository;
+
+    public AuthenticationController(AuthenticationManager authenticationManager, JwtTokenProvider tokenProvider, UserRepository userRepository) {
+        this.authenticationManager = authenticationManager;
+        this.tokenProvider = tokenProvider;
+        this.userRepository = userRepository;
+    }
 
     @GetMapping("/authenticate")
     public ResponseEntity<AuthenticationResponse> authenticateUser(@RequestBody LoginDto loginDto){

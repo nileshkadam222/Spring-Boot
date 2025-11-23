@@ -3,7 +3,6 @@ package com.nilhartech.jwt.config;
 import com.nilhartech.jwt.security.JwtAuthenticationEntryPoint;
 import com.nilhartech.jwt.security.JwtAuthenticationFilter;
 import com.nilhartech.jwt.service.CustomUserDetailsService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -22,15 +21,22 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 public class SecurityConfig {
 
-    @Autowired
-    private CustomUserDetailsService userDetailsService;
+    private final CustomUserDetailsService userDetailsService;
 
-    @Autowired
-    private JwtAuthenticationEntryPoint authenticationEntryPoint;
+
+    private final JwtAuthenticationEntryPoint authenticationEntryPoint;
+
+    private final JwtTokenProvider tokenProvider;
+
+    public SecurityConfig(CustomUserDetailsService userDetailsService, JwtAuthenticationEntryPoint authenticationEntryPoint, JwtTokenProvider tokenProvider) {
+        this.userDetailsService = userDetailsService;
+        this.authenticationEntryPoint = authenticationEntryPoint;
+        this.tokenProvider = tokenProvider;
+    }
 
     @Bean
-    public JwtAuthenticationFilter jwtAuthenticationFilter(){
-        return  new JwtAuthenticationFilter();
+    public JwtAuthenticationFilter jwtAuthenticationFilter(JwtTokenProvider tokenProvider, CustomUserDetailsService customUserDetailsService){
+        return  new JwtAuthenticationFilter(tokenProvider, customUserDetailsService);
     }
 
     @Bean
@@ -56,7 +62,7 @@ public class SecurityConfig {
                         .anyRequest()
                         .authenticated()
                 );
-        http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+        http.addFilterBefore(jwtAuthenticationFilter(tokenProvider, userDetailsService), UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 
